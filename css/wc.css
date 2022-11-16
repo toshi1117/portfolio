@@ -1,0 +1,491 @@
+@charset "UTF-8";
+body {
+  background-color: white;
+  line-height: 1.7;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#mainvisual img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+}
+
+.header-list a:hover {
+  color: aqua;
+}
+
+#worldcup .image img {
+  margin-right: 20px;
+}
+#worldcup span {
+  color: #7CADB6;
+}
+
+#groupreague img {
+  width: 80vw;
+}
+
+.header {
+  display: flex;
+  display: none;
+  background-color: #7CADB6;
+  height: 70px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-list ul {
+  display: flex;
+}
+
+.header-list li {
+  list-style: none;
+  padding: 33px 20px;
+  font-size: 15px;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", "游ゴシック体", "ヒラギノ角ゴ pro w3", sans-serif;
+}
+
+.header-logo {
+  font-size: 30px;
+  font-family: 'Vollkorn', serif;
+  float: left;
+  padding: 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-logo img {
+  width: 40px;
+}
+/* PCではハンバーガーメニューのメニューを隠す */
+.menu {
+  display: none;
+}
+
+.section-title {
+  color: #7CADB6;
+  text-align: center;
+  border-bottom: 2px solid #7CADB6;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  padding-top: 70px;
+}
+
+.top {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  
+  color: #7CADB6;
+
+  background-image: url(../img/italy-gettyimages-71404165-594x594.jpg),
+                    url(../img/spain-12soccerA1-articleLarge.jpg),
+                    url(../img/germany-gettyimages-452112074-612x612.jpg),
+                    url(../img/France_champion_of_the_Football_World_Cup_Russia_2018.jpg);
+  background-repeat: no-repeat,
+                     no-repeat,
+                     no-repeat,
+                     no-repeat;
+  background-position: left top,
+                       right top,
+                       left bottom,
+                       right bottom;
+  background-size: 50vw 50vh,
+                   50vw 50vh,
+                   50vw 50vh,
+                   50vw 50vh;
+}
+
+
+.inner {
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.top p {
+  text-align: center;
+  color: white;
+}
+
+.flex-item {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin-left: 30px;
+}
+
+#groupreague .flex-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#groupreague img {
+  width: 80vw;
+  height: 400px;
+}
+#groupreague .text {
+  width: 75%;
+}
+#tournament .flex-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#tournament .text {
+  width: 75%;
+}
+#japan p {
+  font-size: small;
+}
+#japan .flex-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+#japan .flex-box1,.flex-box2,.flex-box3,.flex-box4,.flex-box5, .flex-box6 {
+  display: flex;
+}
+#japan img {
+  width: 45vw;
+  object-fit: cover;
+}
+#japan .data1 {
+  margin-left: 80px;
+}
+#japan .text {
+  padding: 0 50px;
+}
+#japan .description {
+  width: 50%;
+  margin-left: 150px;
+}
+#japan .record {
+  width: 40%;
+  margin-left: 40px;
+}
+#japan dt {
+  position: relative;
+}
+#japan span {
+  color: #7CADB6;
+  position:absolute;
+  top:0;
+  right:5px;
+  font-size:13px;
+}
+#japan .container {
+  display: flex;
+  justify-content: center;
+} 
+#japan h4.france,.germany,.brasil {
+  margin-left: 8vw;
+}
+#japan h4.japan-korea,.southafrica,.russia {
+  margin-left: 55vw;
+}
+/*アコーディオンパネル*/
+#japan .content {
+  display: none;
+}
+
+
+/* 表*/
+table th, td {
+  padding: 5px;
+  font-size: small;
+}
+table th {
+  background-color: #2d99ac;
+  color: white;
+}
+table td {
+  background-color: #7CADB6;
+  color: white;
+}
+
+
+/*スライドギャラリー*/
+#players {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 1200px;
+  margin: 100px auto;
+}
+#slideGalley {
+  width: 1200px;
+  overflow: hidden;
+  position: relative;
+}
+#slide {
+  width: 50000px;
+}
+#slide li {
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+#paging {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+}
+#paging li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/page.png);
+}
+#paging li.active {
+  background: url(../img/page_active.png);
+}
+#nav .prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -50px;
+}
+#nav .next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -50px;
+}
+
+#slide img {
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+  margin-left: 40px;
+}
+#slide .text {
+  width: 430px;
+  margin-right: 100px;
+}
+
+#qatar .flex-item{
+  display: flex;
+  align-items: flex-start;
+}
+
+/* バリデーション付きメールフォーム */
+h3 {
+  margin-top: 20px;
+  font-size: large;
+  color: #7CADB6;
+}
+dl dt {
+  border-left: 5px solid #7CADB6;
+  border-bottom: 1px solid #7CADB6;
+  font-size: small;
+  margin: 0;
+  padding: 5px;
+}
+dl dt span {
+  color: red;
+  font-weight: bold;
+}
+dl dd {
+  font-size: small;
+  margin: 0;
+  padding: 10px;
+}
+dl dd input {
+  position: relative;
+  z-index: 2;
+}
+dl dd label {
+  position: relative;
+  padding: 5px 5px 5px 25px;
+  margin: 0 5px 0 -25px;
+  margin-left: -25px;
+  position: relative;
+  z-index: 1;
+}
+dl dd.error input ,
+dl dd.error textarea ,
+dl dd.error label {
+  background: #FFCCCC;
+}
+*html dl dd.error label {
+  background: none;
+}
+*+html dl dd.error label{
+  background: none;
+}
+dl dd p.error {
+  margin: 0;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+/*---------------------------------------------*/
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+h3.form {
+  text-align: center;
+}
+form {
+  display: flex;
+  
+  flex-direction: column;
+}
+
+#qatar {
+  margin-bottom: 50px;
+}
+.copyright {
+  text-align: center;
+}
+
+/* レスポンシブルデザイン -----------------------------------------------------*/
+
+
+@media screen and (max-width: 1250px) {
+.header-list {
+  display: none;
+}
+/* ハンバーガーメニュー --------------------------------------*/
+/*ハンバーガーメニューのボタンをつくる*/
+.hamburger {
+  width: 30px;
+  height: 30px;
+  background: #2d99ac;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  z-index: 999;
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+.hamburger span {
+  background: #fff;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  transition: 0.3s ease-out;
+}
+.hamburger span:nth-of-type(1) {
+  top: 15px;
+}
+.hamburger span:nth-of-type(3) {
+  bottom: 15px;
+}
+/*activeクラスが付いているときは三本線ではなく×印にする*/
+.hamburger.active span:nth-of-type(1) {
+transform: translateY(9px) rotate(-45deg);
+  transition: 0.3s ease-out;
+}
+.hamburger.active span:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+  transition: 0.3s ease-out;
+}
+.hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+/*ナビゲーションを左側に隠す*/
+.menu {
+  display: block;
+  width: 300px;
+  background: #2d99ac;
+  color: #7CADB6;
+  position: absolute;
+  left: 300px;
+  padding-top: 40px;
+  transform: translate(1000px);
+  transition: 0.3s ease-out;
+}
+li {
+  margin-bottom: 10px;
+}
+/*openクラスが付いているときは見える位置に表示する*/
+.menu.open {
+  transform: translate(0);
+  transition: 0.3s ease-out;
+}
+.header a {
+  color: #fff;
+}
+}
+@media screen and (max-width: 750px) {
+/* 要素を縦並びに */
+#worldcup .flex-item {
+  flex-direction: column;
+}
+#qatar .flex-item {
+  flex-direction: column;
+}
+#japan .flex-box1,.flex-box3,.flex-box5 {
+  flex-direction: column;
+}
+#japan .flex-box2,.flex-box4,.flex-box6 {
+  flex-direction: column-reverse;
+}
+/* スライドギャラリー */
+#players li {
+  flex-direction: column;
+}
+#players .image img {
+  width: 100vw;
+  margin: 0 auto;
+}
+/* slideの幅を変更したい */
+#container {
+  width: 100vw;
+}
+#slideGalley {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+#paging {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+
+#worldcup img {
+  width: 100vw;
+  margin-right: 0;
+}
+#groupreague img {
+  width: 100vw;
+}
+#tournament img {
+  width: 100vw;
+}
+
+/*コンタクトフォーム*/
+.contact-form {
+  width: 100vw;
+}
+}
