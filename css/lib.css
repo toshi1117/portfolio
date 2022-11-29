@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+body {
+  line-height: 1.6;
+}
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+/*--------------------メインビジュアル---------------------*/
+.mainvisual {
+  position: relative;
+  background-image: url(../img/life-is-beautiful.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 120vh;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #FFF;
+  font-size: 72px;
+}
+
+
+
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+}
+/*----------------------------------------
+ヘッダー
+-----------------------------------------*/
+
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.header-logo {
+  padding: 20px;
+  font-size: 30px;
+}
+.list {
+  padding: 20px;
+}
+/*==================================================
+スーッ（枠線が伸びて出現）
+===================================*/
+
+/*枠線が伸びて出現*/
+main .top-text {
+  text-align: center;
+  font-size: large;
+  padding: 50px;
+  width: 50vw;
+  margin: 350px auto;
+}
+.lineTrigger{
+  position: relative; /* 枠線が書かれる基点*/
+  opacity:0;
+}
+
+.lineTrigger.lineanime{
+  animation-name:lineAnimeBase;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes lineAnimeBase{
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;  
+}
+}
+/*上下線*/
+.lineTrigger::before,
+.lineTrigger::after{
+  position: absolute;
+  content:"";
+  width:0;
+  height:1px;
+  background:#333;/* 枠線の色*/
+}
+
+/*左右線*/
+.line2::before,
+.line2::after{
+  position: absolute;
+  content:"";
+  width: 1px;
+  height:0;
+  background:#333;/* 枠線の色*/
+}
+
+/*上線*/
+.lineTrigger::before {
+  top:0;
+  left:0;
+}
+
+.lineTrigger.lineanime::before {
+  animation: lineAnime .5s linear 0s forwards;/*表示されて0秒後に上線が0.5秒かけて表示*/
+}
+
+/*右線*/
+.line2::before{ 
+  top:0;
+  right:0;
+}
+
+.lineTrigger.lineanime .line2::before {
+  animation: lineAnime2 .5s linear .5s forwards;/*表示されて0.5秒後に右線が0.5秒かけて表示*/
+}
+
+/*下線*/
+.lineTrigger::after { 
+  bottom:0;
+  right:0;
+}
+
+.lineTrigger.lineanime::after {
+  animation: lineAnime .5s linear 1s forwards;/*表示されて1秒後に下線が0.5秒かけて表示*/
+}
+
+/*左線*/
+.line2::after{ 
+  bottom:0;
+  left:0;
+}
+
+.lineTrigger.lineanime .line2::after {
+  animation: lineAnime2 .5s linear 1.5s forwards;/*表示されて1.5秒後に左線が0.5秒かけて表示*/
+}
+
+@keyframes lineAnime {
+  0% {width:0%;}
+    100%{width:100%;}
+}
+
+@keyframes lineAnime2 {
+  0% {height:0%;}
+    100%{height:100%;}
+}
+
+/*枠線内側の要素*/
+
+.lineTrigger.lineanime .lineinappear{
+  animation: lineInnerAnime 1s linear 2s forwards;/*2秒後に中央のエリアが1秒かけて表示*/
+  opacity: 0;/*初期値を透過0にする*/ 
+}
+
+@keyframes lineInnerAnime{
+  0% {opacity:0;}
+    100% {opacity:1;}
+}
+/*--------------------------------------------
+イントロダクション
+---------------------------------------------*/
+#introduction h1 {
+  margin-top: 200px;
+}
+#introduction .text {
+  margin-top: 100px;
+  padding: 0 100px;
+}
+
+/*------------------------------------------------
+ストーリー
+-------------------------------------------------*/
+#story h1 {
+  margin-top: 200px;
+}
+
+#story .text {
+  margin-top: 100px;
+  padding: 0 100px;
+}
+
+/*---------------------キャラクター-------------*/
+#characters h1 {
+  margin-top: 200px;
+}
+
+img {
+  width: 40VW;
+  height: 50vh;
+  object-fit: cover;
+}
+ 
+#characters .container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.item {
+  margin: auto 100px;
+}
+
+/*==================================================
+ボンッ、ヒュッ
+===================================*/
+
+/* 拡大 */
+.zoom-in{
+  animation-name:zoomInAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+  transform: scale(0.6);
+  opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+  opacity: 1;
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定 */
+ 
+.zoomInTrigger,
+.zoomOutTrigger{
+    opacity: 0;
+}
+
+/*------------------------予告------------------------*/
+#trailer h1 {
+  margin-top: 200px;
+}
+
+
+.youtube {
+  text-align: center;
+}
+
+/*-----------------------------------------
+フッター
+-----------------------------------------*/
+
+footer .container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 60px 0;
+  padding: 0 30px;
+}
+footer .section {
+  margin-left: 200px;
+  font-size: large;
+}
+.copyright {
+  text-align: center;
+  font-size: small;
+  margin-bottom: 50px;
+}
+footer span {
+  font-weight: bold;
+}
+footer {
+  margin-top: 100px;
+}
+
+/*-----------------------------------------------------------------------
+SP
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+
+  .container:nth-of-type(2n-1) {
+    flex-direction: column-reverse;
+  }
+  .container:nth-of-type(2n) {
+  flex-direction: column;
+}
+
+#characters img {
+  width: 80vw;
+  margin: 0 auto;
+}
+.header-logo {
+  font-size: small;
+}
+.list {
+  font-size: x-small;
+}
+
+main .top-text {
+  margin: 50px auto;
+}
+
+/*--------------------------------------------
+イントロダクション
+---------------------------------------------*/
+#introduction h1 {
+  margin-top: 0px;
+}
+#introduction .text {
+  margin-top: 100px;
+  padding: 0px;
+}
+
+/*------------------------------------------------
+ストーリー
+-------------------------------------------------*/
+#story h1 {
+  margin-top: 200px;
+}
+
+#story .text {
+  margin-top: 100px;
+  padding: 0px;
+}
+
+/*---------------------キャラクター-------------*/
+#characters h1 {
+  margin-top: 200px;
+}
+
+img {
+  width: 40VW;
+  height: 50vh;
+  object-fit: cover;
+  margin: 0 auto;
+}
+ 
+#characters .container {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.item {
+  margin: 0px;
+}
+
+
+
+
+
+
+}
